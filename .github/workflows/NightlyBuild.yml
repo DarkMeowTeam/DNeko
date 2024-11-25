@@ -1,0 +1,46 @@
+#file: noinspection SpellCheckingInspection
+name: NightlyBuild
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: "!contains(github.event.head_commit.message, '[SKIP CI]')"
+
+        steps:
+            -   name: DNeko CheckOutSource
+                uses: actions/checkout@v4
+
+            -   name: DNeko SetupJDK
+                uses: actions/setup-java@v4
+                with:
+                    distribution: 'adopt'
+                    java-version: '21'
+                    java-package: jdk
+
+            -   name: DarkMeow SetupGradle
+                uses: gradle/actions/setup-gradle@v4
+
+            -   name: DarkMeow ReleaseBuild
+                env:
+                    OVERRIDE_VERSION: ${{ env.modVer }}
+                run: |
+                    chmod +x ./gradlew
+                    ./gradlew build
+
+            -   name: DarkMeow ReleaseCopy
+                env:
+                    modVer: ${{ env.modVer }}
+                run: |
+                    cp build/libs/DNeko-1.0.jar DNeko-1.0.jar
+
+            -   name: DarkMeow ReleaseUpload
+                uses: actions/upload-artifact@v4
+                with:
+                    name: nightly-build
+                    path: DarkMeow-1.0.jar
