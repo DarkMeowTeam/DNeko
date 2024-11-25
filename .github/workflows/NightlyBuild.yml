@@ -23,7 +23,7 @@ jobs:
                     java-version: '21'
                     java-package: jdk
 
-            -   name: DarkMeow SetupGradle
+            -   name: DNeko SetupGradle
                 uses: gradle/actions/setup-gradle@v4
 
             -   name: DarkMeow ReleaseBuild
@@ -33,14 +33,14 @@ jobs:
                     chmod +x ./gradlew
                     ./gradlew build
 
-            -   name: DarkMeow ReleaseCopy
+            -   name: DNeko ReleaseCopy
                 env:
                     modVer: ${{ env.modVer }}
                 run: |
-                    cp build/libs/DNeko-1.0.jar DNeko-1.0.jar
+                    cp build/libs/DNeko-Dev.jar DNeko-Dev.jar
 
-            -   name: DarkMeow ReleaseUpload
+            -   name: DNeko ReleaseUpload
                 uses: actions/upload-artifact@v4
                 with:
                     name: nightly-build
-                    path: DarkMeow-1.0.jar
+                    path: DNeko-Dev.jar
