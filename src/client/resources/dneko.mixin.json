@@ -15,6 +15,7 @@
   },
   "mixins": [
     "AccessorBucketItem",
+    "AccessorEntityVelocityUpdateS2CPacket",
     "AccessorPlayerMoveC2SPacket"
   ]
 }

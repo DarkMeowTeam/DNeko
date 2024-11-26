@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.darkmeow.dneko.inject.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "dev.undefinedteam.gensh1n.plugins.MixinPlugin",
+  "client": [
+    "MixinKeyboardInput"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

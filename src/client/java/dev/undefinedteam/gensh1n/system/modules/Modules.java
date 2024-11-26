@@ -95,6 +95,7 @@ public class Modules extends System<Modules> {
         add(new BoatJump());
         add(new AntiWeb());
         add(new MoveFix());
+        add(new InventoryMove());
         add(new Sprint());
         add(new NoPush());
         add(new NoSlow());
