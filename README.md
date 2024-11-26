@@ -5,6 +5,8 @@
 
 # DNeko
 
+![欣欣哥快来看看吧](https://github.com/user-attachments/assets/8072d33c-99d4-468d-8058-f5d04b10eaaf)
+
 Based from `Gensh1n Cilent`
 
 专注于绕过吉吉岛服务器的 1.20.4 高版本客户端
@@ -23,7 +25,7 @@ Based from `Gensh1n Cilent`
 4. 在构建成功后 打开 `build\libs` 目录
 5. 将其复制到一个 Minecraft 1.20.4 Fabric 客户端 `mods` 文件中 (必须与 `ViaFabricPlus` 配合 否则无法进入吉吉岛)
 6. 将 `ViaFabricPlus` 版本设置为 `1.18-1.18.1`
-7. 通过 `Myth` 脱盒启动代码 然后根据提示进行连接
+7. 通过 `Myth` / `Zone` 脱盒启动代码 然后根据提示进行连接
 8. 首次进入游戏后 请按下键盘上的 `R-SHIFT` `(右SHIFT)` 打开 `ClickGUI`
 
 # LowIQ疑难解答
@@ -46,4 +48,4 @@ Based from `Gensh1n Cilent`
 
 > Q: 进入游戏 10 ~ 30 秒后被封
 > 
-> A: 请检查是否开启 `Protocol` 以及是否曾被封禁过 如果是 请更换 IP地址 优化
+> A: 请检查是否开启 `Protocol` 以及是否曾被封禁过 如果是 请更换 IP地址 游玩
