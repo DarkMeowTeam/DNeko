@@ -14,10 +14,7 @@ base {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
-
-    withSourcesJar()
 }
 
 loom {
@@ -214,6 +211,7 @@ tasks.jar {
 tasks.shadowJar {
     configurations = listOf(project.configurations.getByName("shadow"))
 
+    destinationDirectory.set(tasks.jar.get().archiveFile.get().asFile.parentFile)
     from(tasks.jar.get().archiveFile)
 
     dependencies {
