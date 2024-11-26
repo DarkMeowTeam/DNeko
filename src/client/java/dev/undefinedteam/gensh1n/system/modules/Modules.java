@@ -130,6 +130,7 @@ public class Modules extends System<Modules> {
         add(new AntiBot());
         add(new Teams());
         add(new Debug());
+        add(new LagDebug());
     }
 
     @Override
