@@ -61,7 +61,7 @@ public class Particles extends Module {
     }
 
     public enum Mode {
-        Off, SnowFlake, Stars, Hearts, Dollars, Bloom;
+        Off, SnowFlake, Stars, Hearts, Dollars, Bloom, SilenceFix;
     }
 
     public enum Physics {
@@ -71,16 +71,12 @@ public class Particles extends Module {
     private final ArrayList<ParticleBase> fireFlies = new ArrayList<>();
     private final ArrayList<ParticleBase> particles = new ArrayList<>();
 
+    public static final Identifier silenceFix = new Identifier("textures/silencefix.png");
     public static final Identifier star = new Identifier("textures/star.png");
     public static final Identifier heart = new Identifier("textures/heart.png");
     public static final Identifier dollar = new Identifier("textures/dollar.png");
     public static final Identifier snowflake = new Identifier("textures/snowflake.png");
-    public static final Identifier capture = new Identifier("textures/capture.png");
     public static final Identifier firefly = new Identifier("textures/firefly.png");
-    public static final Identifier arrow = new Identifier("textures/triangle.png");
-    public static final Identifier bubble = new Identifier("textures/hitbubble.png");
-    public static final Identifier default_circle = new Identifier("textures/circle.png");
-    public static final Identifier CONTAINER_BACKGROUND = new Identifier("textures/container.png");
 
     @EventHandler
     public void onUpdate(TickEvent.Pre event) {
@@ -315,6 +311,7 @@ public class Particles extends Module {
                 case Dollars -> RenderSystem.setShaderTexture(0, dollar);
                 case Hearts -> RenderSystem.setShaderTexture(0, heart);
                 case Stars -> RenderSystem.setShaderTexture(0, star);
+                case SilenceFix -> RenderSystem.setShaderTexture(0, silenceFix);
             }
             Color color2 = rainbow(6, (age * 10), 1f, 1, 1);
             Camera camera = mc.gameRenderer.getCamera();
