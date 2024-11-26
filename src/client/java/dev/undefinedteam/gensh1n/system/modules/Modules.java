@@ -109,6 +109,7 @@ public class Modules extends System<Modules> {
         add(new HitSound());
         add(new DickESP());
         add(new ESP());
+        add(new Particles());
     }
 
     private void initWorld() {
