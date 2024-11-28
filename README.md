@@ -5,8 +5,6 @@
 
 # DNeko
 
-![欣欣哥快来看看吧](https://github.com/user-attachments/assets/8072d33c-99d4-468d-8058-f5d04b10eaaf)
-
 Based from `Gensh1n Cilent`
 
 专注于绕过吉吉岛服务器的 1.20.4 高版本客户端
